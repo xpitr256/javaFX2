@@ -28,11 +28,8 @@ public class Robot {
     public void mover() {
         if (this.terreno.estaEnContacto(this.posicion)) {
             this.direccion = this.direccion.inversa();
-            this.posicion = this.posicion.siguiente(this.direccion);
-        } else {
-            this.posicion = this.posicion.siguiente(this.direccion);
         }
-
+        this.posicion = this.posicion.siguiente(this.direccion);
     }
 
     public Direccion getDireccion() {
